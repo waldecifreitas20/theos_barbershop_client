@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { AppLogo } from "../components/AppLogo";
 import { Button } from "../components/Button";
 import { ButtonFlat } from "../components/ButtonFlat";
@@ -5,16 +6,16 @@ import { Form } from "../components/Form";
 import { Input } from "../components/Input";
 import { Row } from "../components/Row";
 
-export function CostumerSignUp() {
+export function CostumerSignUpView() {
 
   function handleSubmit(form: FormData) {
     console.log(form.get("first_name"));
     console.log(form.get("surname"));
-
   }
 
+
   return (
-    <main id="background-app" className="py-10 px-5">
+    <main id="background-app" className="px-5">
       <AppLogo />
 
       <Form onSubmit={handleSubmit}>
@@ -39,7 +40,9 @@ export function CostumerSignUp() {
         <div className="mt-4">
           <Row>
             <Button additionalStyle="w-full">Cadastrar</Button>
-            <ButtonFlat additionalStyle="w-full">Voltar para Home</ButtonFlat>
+            <ButtonFlat additionalStyle="w-full">
+              <Link to="/">Voltar para Home</Link>
+            </ButtonFlat>
           </Row>
         </div>
       </Form>

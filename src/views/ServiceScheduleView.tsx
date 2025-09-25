@@ -1,5 +1,6 @@
 import type { Option } from "../@types/Option";
 import { AppLogo } from "../components/AppLogo";
+import { BackToHomeButton } from "../components/BackToHomeButton";
 import { Select } from "../components/Select";
 
 const options = [
@@ -12,7 +13,7 @@ const options = [
   { id: "012", value: "Completo" },
 ];
 
-export function ServiceSchedule() {
+export function ServiceScheduleView() {
   function handleSelectService(opt: Option) {
 
   }
@@ -41,6 +42,8 @@ export function ServiceSchedule() {
 
             <button className="bg-blue-500 hover:bg-blue-600 mt-5 rounded-md py-2">Agendar</button>
           </form>
+
+          <BackToHomeButton />
 
         </section>
       </main>
