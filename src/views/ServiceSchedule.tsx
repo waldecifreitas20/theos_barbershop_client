@@ -1,4 +1,5 @@
 import type { Option } from "../@types/Option";
+import { AppLogo } from "../components/AppLogo";
 import { Select } from "../components/Select";
 
 const options = [
@@ -20,10 +21,7 @@ export function ServiceSchedule() {
     <>
       <main id="background-app" className="py-10">
         <section className="text-white z-10 w-fit mx-auto">
-          <h1 className="text-white title mb-10 mt-4 mx-auto block text-center">
-            <p className="text-6xl">Theo's</p>
-            <p className="text-xl italic">Barbershop</p>
-          </h1>
+          <AppLogo />
 
 
           <form className="bg-zinc-950/70 backdrop-blur-md py-6 px-4 rounded-2xl flex flex-col gap-4 min-w-[300px]">
