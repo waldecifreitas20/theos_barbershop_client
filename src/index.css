@@ -1,1 +1,66 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "title";
+  src: url("./assets/Playball-Regular.ttf");
+}
+
+@font-face {
+  font-family: "text";
+  src: url("./assets/JosefinSans-VariableFont_wght.ttf");
+}
+
+.title {
+  font-family: "title";
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+body {
+  position: relative;
+  font-family: "text";
+  font-weight: 400;
+  font-style: normal;
+}
+
+#background-app::before {
+  content: "";
+  background: url("https://cdn.pixabay.com/photo/2024/09/14/16/19/ai-generated-9047404_1280.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  position: absolute;
+  display: block;
+  z-index: -2;
+
+  height: 100%;
+  width: 100%;
+  filter: grayscale(1);
+  inset: 0;
+}
+
+#background-app {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+#background-app::after {
+  content: "";
+
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  filter: opacity(.5);
+  background: black;
+}
