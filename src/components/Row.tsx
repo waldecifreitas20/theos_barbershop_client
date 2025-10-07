@@ -7,7 +7,7 @@ interface RowProps extends PropsWithChildren {
 
 export function Row(props: RowProps) {
   return (
-    <div className={`flex ${!props.forceRow && "flex-col sm:flex-row"} ${props.gap ?? "gap-4"}`}>
+    <div className={`flex ${props.forceRow !== true && "flex-col sm:flex-row"} ${props.gap ?? "gap-4"}`}>
       {props.children}
     </div>
   );

@@ -5,12 +5,17 @@ import { ButtonFlat } from "../components/ButtonFlat";
 import { Form } from "../components/Form";
 import { Input } from "../components/Input";
 import { Row } from "../components/Row";
+import { useState } from "react";
+import { formValidations } from "../utils/formValidations";
 
 export function CostumerSignUpView() {
+  const [validate, setValidate] = useState(false);
 
   function handleSubmit(form: FormData) {
     console.log(form.get("first_name"));
     console.log(form.get("surname"));
+
+    setValidate(true);
   }
 
 
@@ -22,19 +27,78 @@ export function CostumerSignUpView() {
         <legend className="title text-3xl mb-2">Nova Conta</legend>
 
         <Row forceRow>
-          <Input type="text" name="first_name" placeholder="Nome" />
-          <Input type="text" name="surname" placeholder="Sobrenome" />
+          <Input
+            type="text"
+            name="first_name"
+            label="Nome"
+            placeholder="José"
+            shouldValidate={validate}
+            isRequired
+            invalidText="Campo Obrigatório"
+            onValidate={(value) => !formValidations.isEmpty(value)} />
+
+          <Input
+            type="text"
+            name="surname"
+            placeholder="Silva"
+            label="Sobrenome"
+            isRequired
+            shouldValidate={validate}
+            invalidText="Campo Obrigatório"
+            onValidate={(value) => !formValidations.isEmpty(value)} />
         </Row>
 
         <Row>
-          <Input type="text" name="cpf" placeholder="CPF" />
-          <Input type="text" name="phone" placeholder="Telefone" />
-          <Input type="date" name="birth_day" placeholder="Data de Nascimento" />
+          <Input
+            type="text"
+            name="cpf"
+            label="CPF"
+            placeholder="000.000.000-00"
+            isRequired
+            shouldValidate={validate}
+            invalidText="Campo Obrigatório"
+            onValidate={(value) => formValidations.isCpf(value)}
+          />
+          <Input
+            type="text"
+            name="phone"
+            label="Telefone"
+            placeholder="(00) 0 0000 0000"
+            isRequired
+            invalidText="Telefone inválido"
+            shouldValidate={validate}
+            onValidate={(value) => formValidations.isPhoneNumber(value)}
+          />
+          <Input
+            type="date"
+            name="birth_day"
+            label="Data de Nascimento"
+            isRequired
+            invalidText="Campo Obrigatório"
+            shouldValidate={validate}
+            onValidate={(value) => !formValidations.isEmpty(value)}
+          />
         </Row>
 
-        <Row forceRow>
-          <Input type="email" name="email" placeholder="Email" />
-          <Input type="password" name="password" placeholder="Senha" />
+        <Row >
+          <Input
+            type="email"
+            name="email"
+            label="Email"
+            isRequired
+            invalidText="Email inválido"
+            shouldValidate={validate}
+            onValidate={(value) => formValidations.isEmail(value)}
+          />
+          <Input
+            type="password"
+            name="password"
+            label="Senha"
+            isRequired
+            invalidText="Senha deve conter entre 8 a 16 caracteres com letra, número e simbolos"
+            shouldValidate={validate}
+            onValidate={(value) => formValidations.isValidPassword(value)}
+          />
         </Row>
 
         <div className="mt-4">

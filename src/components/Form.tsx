@@ -7,7 +7,7 @@ interface FormProps extends PropsWithChildren {
 
 export function Form(props: FormProps) {
 
-  function handleSubmit(evt: any) {
+  function handleFormAction(evt: any) {
     evt.preventDefault();
 
     const form = new FormData(evt.target);
@@ -16,7 +16,7 @@ export function Form(props: FormProps) {
 
   return (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={handleFormAction}
       className="
       py-10 px-5 
       max-w-[700px]

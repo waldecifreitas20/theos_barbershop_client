@@ -12,6 +12,7 @@ export function HomeView() {
             <a href="#">Serviços</a>
             <a href="#"></a>
             <Link to="/agendamento">Agendar Serviço</Link>
+            <Link to="/nova-conta">Cadastrar</Link>
           </div>
         </nav>
       </header>
