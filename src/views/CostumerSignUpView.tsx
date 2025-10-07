@@ -7,15 +7,17 @@ import { Input } from "../components/Input";
 import { Row } from "../components/Row";
 import { useState } from "react";
 import { formValidations } from "../utils/formValidations";
+import type { Costumer } from "../@types/Costumer";
+
 
 export function CostumerSignUpView() {
   const [validate, setValidate] = useState(false);
 
-  function handleSubmit(form: FormData) {
-    console.log(form.get("first_name"));
-    console.log(form.get("surname"));
-
+  function handleSubmit(data: Costumer) {
     setValidate(true);
+
+    console.log(data);
+
   }
 
 
@@ -23,7 +25,7 @@ export function CostumerSignUpView() {
     <main id="background-app" className="px-5">
       <AppLogo />
 
-      <Form onSubmit={handleSubmit}>
+      <Form<Costumer> onSubmit={handleSubmit}>
         <legend className="title text-3xl mb-2">Nova Conta</legend>
 
         <Row forceRow>
@@ -104,9 +106,11 @@ export function CostumerSignUpView() {
         <div className="mt-4">
           <Row>
             <Button additionalStyle="w-full">Cadastrar</Button>
-            <ButtonFlat type="button" role="button" additionalStyle="w-full">
-              <Link to="/">Voltar para Home</Link>
-            </ButtonFlat>
+            <Link to="/" className="block w-full">
+              <ButtonFlat additionalStyle="w-full">
+                Voltar para Home
+              </ButtonFlat>
+            </Link>
           </Row>
         </div>
       </Form>

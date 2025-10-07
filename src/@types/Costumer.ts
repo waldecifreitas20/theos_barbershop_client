@@ -1,5 +1,6 @@
 export type Costumer = {
-  name : string;
+  firstName : string;
+  surname : string;
   email: string;
   password: string;
   cpf: string;

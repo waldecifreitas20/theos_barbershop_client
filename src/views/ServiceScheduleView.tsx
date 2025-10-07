@@ -1,47 +1,55 @@
-import type { Option } from "../@types/Option";
+import type { Appointment } from "../@types/Appointment";
 import { AppLogo } from "../components/AppLogo";
 import { BackToHomeButton } from "../components/BackToHomeButton";
-import { Select } from "../components/Select";
+import { Checkbox } from "../components/Checkbox";
+import { Form } from "../components/Form";
+import { Input } from "../components/Input";
 
-const options = [
-  { id: "0", value: "Cabelo" },
-  { id: "1", value: "Barba" },
-  { id: "2", value: "Sombrancelha" },
-  { id: "01", value: "Cabelo e Barba" },
-  { id: "02", value: "Cabelo e Sombancelha" },
-  { id: "12", value: "Barba e Sombrancelha" },
-  { id: "012", value: "Completo" },
-];
 
 export function ServiceScheduleView() {
-  function handleSelectService(opt: Option) {
-
+  function handleSchedule(data: Appointment) {
+    console.log(data);
   }
 
   return (
     <>
       <main id="background-app" className="py-10">
-        <section className="text-white z-10 w-fit mx-auto">
+        <section className="text-white z-10 w-[300px] mx-auto">
           <AppLogo />
 
-
-          <form className="bg-zinc-950/70 backdrop-blur-md py-6 px-4 rounded-2xl flex flex-col gap-4 min-w-[300px]">
-            <legend className="text-2xl mb-5 text-center">Agende Seu Corte</legend>
-            <input type="text" placeholder="Seu nome" className="outline-0" />
-
-            <div>
-              <label htmlFor="date">Data: </label>
-              <input type="date" id="date" className="outline-0" />
-            </div>
-
-            <Select
-              label="Tipo de Serviço: "
-              options={options}
-              onSelected={handleSelectService}
+          <Form<Appointment> onSubmit={handleSchedule} data-type="Schedule">
+            <Input
+              type="text"
+              name="Nome"
+              label="Nome do Cliente:"
+              isRequired
+            />
+            <Input
+              type="date"
+              label="Data do atendimento:"
+              name="date"
+              isRequired
             />
 
+            <div className="flex justify-between">
+              <Checkbox
+                label="Cabelo"
+                name="hair"
+              />
+              <Checkbox
+                label="Barba"
+                name="beard"
+              />
+              <Checkbox
+                label="Sombrancelha"
+                name="eyebrow"
+              />
+            </div>
+
+
+
             <button className="bg-blue-500 hover:bg-blue-600 mt-5 rounded-md py-2">Agendar</button>
-          </form>
+          </Form>
 
           <BackToHomeButton />
 

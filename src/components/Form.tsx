@@ -1,17 +1,19 @@
 import type { PropsWithChildren } from "react";
 
-interface FormProps extends PropsWithChildren {
-  onSubmit: (form: FormData) => void;
+interface FormProps<T> extends PropsWithChildren {
+  onSubmit: (data: T) => void;
   legend?: string;
 }
 
-export function Form(props: FormProps) {
+export function Form<T>(props: FormProps<T>) {
 
   function handleFormAction(evt: any) {
     evt.preventDefault();
 
     const form = new FormData(evt.target);
-    props.onSubmit(form);
+    const data = Object.fromEntries(form.entries())
+
+    props.onSubmit(data as T);
   }
 
   return (
