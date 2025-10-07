@@ -104,7 +104,7 @@ export function CostumerSignUpView() {
         <div className="mt-4">
           <Row>
             <Button additionalStyle="w-full">Cadastrar</Button>
-            <ButtonFlat additionalStyle="w-full">
+            <ButtonFlat type="button" role="button" additionalStyle="w-full">
               <Link to="/">Voltar para Home</Link>
             </ButtonFlat>
           </Row>
