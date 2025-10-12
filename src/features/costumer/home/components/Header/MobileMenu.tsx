@@ -13,7 +13,7 @@ export function MobileMenu() {
 
 
   return (
-    <>
+    <div className="md:hidden">
       <button onClick={openMenu}><i className="fa-solid fa-2xl fa-bars"></i></button>
 
       {isMenuOpen && (
@@ -40,7 +40,7 @@ export function MobileMenu() {
         z-20
         "
         style={{
-          left: `${isMenuOpen ? "0px" : "-500px"}`,
+          left: `${isMenuOpen ? "0px" : "-100vw"}`,
         }}
 
       >
@@ -76,6 +76,6 @@ export function MobileMenu() {
             text="Fale Conosco" />
         </ul>
       </nav>
-    </>
+    </div>
   );
 }
