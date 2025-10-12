@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "title";
-  src: url("./assets/Playball-Regular.ttf");
+  src: url("./assets/fonts/Playball-Regular.ttf");
 }
 
 @font-face {
   font-family: "text";
-  src: url("./assets/JosefinSans-VariableFont_wght.ttf");
+  src: url("./assets/fonts/JosefinSans-VariableFont_wght.ttf");
 }
 
 .title {
@@ -27,7 +27,7 @@ body {
 
 #background-app::before {
   content: "";
-  background: url("https://cdn.pixabay.com/photo/2024/09/14/16/19/ai-generated-9047404_1280.png");
+  background: url("./assets/images/background.svg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
