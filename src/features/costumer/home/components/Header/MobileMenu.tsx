@@ -1,7 +1,16 @@
 import { useState } from "react";
 import { MobileMenuItem } from "./MobileMenuItem";
+import { SocialsMedia } from "./SocialsMedia";
 
-export function MobileMenu() {
+interface MobileMenuProps {
+  options: Array<{
+    label: string,
+    link: string,
+    iconClass: string;
+  }>
+}
+
+export function MobileMenu(props: MobileMenuProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function openMenu() {
@@ -45,37 +54,20 @@ export function MobileMenu() {
 
       >
         <ul className="mt-5 justify-between text-sm">
-          <MobileMenuItem
-            onClick={() => closeMenu()}
-            icon={<i className="fa-solid fa-house"></i>}
-            text="Área do Cliente" />
-
-          <MobileMenuItem
-            onClick={() => closeMenu()}
-            icon={<i className="fa-solid fa-scissors"></i>}
-            text="Serviços" />
-
-          <MobileMenuItem
-            onClick={() => closeMenu()}
-            icon={<i className="fa-solid fa-users"></i>}
-            text="Nossa Equipe" />
-
-          <MobileMenuItem
-            onClick={() => closeMenu()}
-            icon={<i className="fa-solid fa-wallet"></i>}
-            text="Planos" />
-
-          <MobileMenuItem
-            onClick={() => closeMenu()}
-            icon={<i className="fa-solid fa-receipt"></i>}
-            text="Sobre" />
-
-          <MobileMenuItem
-            onClick={() => closeMenu()}
-            icon={<i className="fa-solid fa-message"></i>}
-            text="Fale Conosco" />
+          {props.options.map(opt => {
+            return (
+              <MobileMenuItem
+                onClick={() => closeMenu()}
+                icon={<i className={`fa-solid ${opt.iconClass}`}></i>}
+                text={opt.label} />
+            );
+          })}
         </ul>
+        <div className="border w-full border-white/20 my-10"></div>
+        <SocialsMedia />
+
       </nav>
+
     </div>
   );
 }

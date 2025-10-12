@@ -1,4 +1,4 @@
-import { TopSection } from "./layout/Top";
+import { TopSection } from "./layouts/Top";
 
 export function HomePage() {
   return (
