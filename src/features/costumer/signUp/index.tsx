@@ -1,16 +1,16 @@
 import { Link } from "react-router";
-import { AppLogo } from "../components/AppLogo";
-import { Button } from "../components/Button";
-import { ButtonFlat } from "../components/ButtonFlat";
-import { Form } from "../components/Form";
-import { Input } from "../components/Input";
-import { Row } from "../components/Row";
+import { AppLogo } from "../../../shared/AppLogo";
+import { Button } from "../../../shared/Button";
+import { ButtonFlat } from "../../../shared/ButtonFlat";
+import { Form } from "../../../shared/Form";
+import { Input } from "../../../shared/Input";
+import { Row } from "../../../shared/Row";
 import { useState } from "react";
-import { formValidations } from "../utils/formValidations";
-import type { Costumer } from "../@types/Costumer";
+import { formValidations } from "../../../utils/formValidations";
+import type { Costumer } from "../../../@types/Costumer";
 
 
-export function CostumerSignUpView() {
+export function SignUpPage() {
   const [validate, setValidate] = useState(false);
 
   function handleSubmit(data: Costumer) {

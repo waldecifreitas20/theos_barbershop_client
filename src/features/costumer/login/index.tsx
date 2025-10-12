@@ -1,10 +1,10 @@
-import { AppLogo } from "../components/AppLogo";
-import { Button } from "../components/Button";
-import { Form } from "../components/Form";
-import { Input } from "../components/Input";
-import { BackToHomeButton } from "../components/BackToHomeButton";
+import { AppLogo } from "../../../shared/AppLogo";
+import { Button } from "../../../shared/Button";
+import { Form } from "../../../shared/Form";
+import { Input } from "../../../shared/Input";
+import { BackToHomeButton } from "../../../shared/BackToHomeButton";
 
-export function LoginView() {
+export function LoginPage() {
   return (
     <main id="background-app" className="py-5">
       <AppLogo />

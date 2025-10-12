@@ -1,12 +1,12 @@
-import type { Appointment } from "../@types/Appointment";
-import { AppLogo } from "../components/AppLogo";
-import { BackToHomeButton } from "../components/BackToHomeButton";
-import { Checkbox } from "../components/Checkbox";
-import { Form } from "../components/Form";
-import { Input } from "../components/Input";
+import type { Appointment } from "../../../@types/Appointment";
+import { AppLogo } from "../../../shared/AppLogo";
+import { BackToHomeButton } from "../../../shared/BackToHomeButton";
+import { Checkbox } from "../../../shared/Checkbox";
+import { Form } from "../../../shared/Form";
+import { Input } from "../../../shared/Input";
 
 
-export function ServiceScheduleView() {
+export function AppointmentPage() {
   function handleSchedule(data: Appointment) {
     console.log(data);
   }
