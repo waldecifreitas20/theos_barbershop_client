@@ -16,7 +16,17 @@ export function ServiceGrid(props: ServiceGridProps) {
     <section className="py-10">
       <h3 className="text-2xl title text-left mt-4 mb-8">{label}</h3>
 
-      <ul className="grid grid-cols-4 gap-10">
+      <ul
+        className="
+        grid 
+        grid-cols-2 
+        gap-4
+
+        sm:grid-cols-3 
+
+        md:grid-cols-4 
+        lg:gap-10
+      ">
         {services.length === 0 ? (
           <>
             <ServiceCardFallback />

@@ -1,22 +1,46 @@
+import { useState } from "react";
 import type { Service } from "../../../../../@types/Service";
+import { Button } from "../../../../../shared/Button";
 
 interface ServiceCardProps {
   service: Service;
 }
 
 export function ServiceCard(props: ServiceCardProps) {
+  const [isMouseOver, setIsMouseOver] = useState(false)
+
   const { service } = props;
 
   return (
     <>
       <li className="text-left">
-        <div className="overflow-hidden h-[300px]">
-          <img className="" src={service.imgUrl} alt={service.name} />
+
+        <div
+          className="
+          relative 
+          overflow-hidden 
+          h-100px 
+          
+          lg:h-[300px]
+          "
+          onMouseOver={() => setIsMouseOver(true)}
+          onMouseLeave={() => setIsMouseOver(false)}
+          >
+
+          <img className="mx-auto block" src={service.imgUrl} alt={service.name} />
+          {isMouseOver && (
+            <div className="bg-black/70 h-full w-full flex items-center absolute top-0">
+              <div className="h-[50px] mx-auto">
+                <Button>Quero esse corte!</Button>
+              </div>
+            </div>
+          )}
+
         </div>
 
         <p className="my-2 bg-orange-500 w-[100px] text-xs text-nowrap p-1">Cliente VIP R$ 0</p>
 
-        <div className="text-left flex justify-between">
+        <div className="text-left md:flex justify-between">
           <p>{service.name}</p>
 
           <p className="text-zinc-400 text-xs">
