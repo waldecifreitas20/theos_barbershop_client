@@ -1,4 +1,4 @@
-import cardFallback from "../../../../assets/images/card-fallback.png";
+import cardFallback from "../../../../../assets/images/card-fallback.png";
 
 
 export function ServiceCardFallback() {

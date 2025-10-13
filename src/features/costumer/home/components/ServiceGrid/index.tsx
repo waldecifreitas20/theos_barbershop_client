@@ -1,4 +1,4 @@
-import type { Service } from "../../../../@types/Service";
+import type { Service } from "../../../../../@types/Service";
 import { ServiceCard } from "./ServiceCard";
 import { ServiceCardFallback } from "./ServiceCardFallback";
 

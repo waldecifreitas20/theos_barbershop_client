@@ -34,7 +34,6 @@ export function useServices() {
   }
 
   return {
-    services,
-    getServicesBytype
+    getServicesBytype,
   };
 }

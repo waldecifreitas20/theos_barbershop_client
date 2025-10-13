@@ -1,4 +1,4 @@
-import type { Service } from "../../../../@types/Service";
+import type { Service } from "../../../../../@types/Service";
 
 interface ServiceCardProps {
   service: Service;
