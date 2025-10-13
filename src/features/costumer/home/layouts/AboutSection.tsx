@@ -43,10 +43,11 @@ export function AboutSection() {
             w-full 
             mt-10 
             mx-auto
-
+            
+            sm:w-[300px]
             sm:m-0
-            sm:w-[400px]
 
+            md:w-[400px]
             md:m-0 
 
             lg:w-[600px]
