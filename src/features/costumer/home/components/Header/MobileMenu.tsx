@@ -34,7 +34,7 @@ export function MobileMenu(props: MobileMenuProps) {
           h-full min-h-screen 
           w-full 
           bg-orange-200/0
-          z-10"
+          z-20"
         ></div>
       )}
 
@@ -42,11 +42,11 @@ export function MobileMenu(props: MobileMenuProps) {
         className="
         bg-black
         h-screen w-[70%]
-        absolute
+        fixed
         top-0
         transition-all
         duration-1000
-        z-20
+        z-30
         "
         style={{
           left: `${isMenuOpen ? "0px" : "-100vw"}`,

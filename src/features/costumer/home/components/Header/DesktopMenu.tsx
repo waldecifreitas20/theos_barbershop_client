@@ -28,6 +28,7 @@ export function DesktopMenu(props: DesktopMenuProps) {
         </nav>
 
         <SocialsMedia />
+        
       </div>
     </Container>
   );
