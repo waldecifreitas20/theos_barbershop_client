@@ -12,7 +12,20 @@ export function AboutSection() {
   return (
     <section className="py-10 my-10 w-full block " style={cssStyle}>
       <Container>
-        <div className="md:flex gap-30 justify-between items-start">
+        <div
+          className="
+            sm:gap-5 
+            sm:flex 
+            sm:justify-between 
+            sm:items-center
+            
+            md:gap-10 
+            
+            lg:items-start
+            lg:gap-20 
+            
+            xl:gap-30 
+            ">
 
           <article className="block text-justify">
             <SectionTitle>Sobre Nós</SectionTitle>
@@ -24,7 +37,22 @@ export function AboutSection() {
             </p>
           </article>
 
-          <img className="block h-[400px]" src={aboutImg} />
+          <img
+            className="
+            block 
+            w-full 
+            mt-10 
+            mx-auto
+
+            sm:m-0
+            sm:w-[400px]
+
+            md:m-0 
+
+            lg:w-[600px]
+        
+            "
+            src={aboutImg} />
 
         </div>
       </Container>
