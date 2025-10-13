@@ -1,5 +1,5 @@
 import { Container } from "../../../../shared/Container";
-import { SectionTitle } from "../components/Header/SectionTitle";
+import { SectionTitle } from "../components/SectionTitle";
 import { useServices } from "../../../../hooks/useServices";
 import { ServiceGrid } from "../components/ServiceGrid";
 
