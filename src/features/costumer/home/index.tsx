@@ -1,4 +1,5 @@
 import { AboutSection } from "./layouts/AboutSection";
+import { OurTeam } from "./layouts/OurTeam";
 import { ServicesSection } from "./layouts/ServicesSection";
 import { TopSection } from "./layouts/TopSection";
 
@@ -8,6 +9,7 @@ export function HomePage() {
       <TopSection />
       <ServicesSection />
       <AboutSection />
+      <OurTeam />
     </div>
   );
 }

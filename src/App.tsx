@@ -3,9 +3,12 @@ import { createRoot } from 'react-dom/client';
 import './styles/index.css';
 import { Router } from './routes/routes.tsx';
 import { RouterProvider } from 'react-router';
+import { BarbersProvider } from './context/BarbersContext.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={Router} />
+    <BarbersProvider>
+      <RouterProvider router={Router} />
+    </BarbersProvider>
   </StrictMode>,
 )
