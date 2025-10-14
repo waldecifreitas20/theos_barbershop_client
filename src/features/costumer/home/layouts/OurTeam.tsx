@@ -14,17 +14,18 @@ export function OurTeam() {
           <SectionTitle>Nossa Equipe</SectionTitle>
         </div>
 
-        <ul className="grid grid-cols-3 gap-10">
+        <ul className="grid grid-cols-3 gap-2 md:gap-10">
           {barberProvider
             .getBarbers()
             .map((barber: Barber) => {
               return (
-                <li className="bg-zinc-600">
-                  <div className="overflow-hidden h-[350px]">
+                <li className="bg-zinc-800 flex flex-col justify-start">
+                  <div className="overflow-hidden lg:h-[350px]">
                     <img className="block" src={barber.profilePhoto} alt="" />
                   </div>
-                  <div className="p-4">
-                    <p className="uppercase text-xl">{barber.name}</p>
+
+                  <div className="p-2 md:p-4">
+                    <p className="uppercase text-sm md:text-base lg:text-xl">{barber.name}</p>
                     <p className="text-zinc-300 text-xs">{barber.topSkill}</p>
                   </div>
                 </li>

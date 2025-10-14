@@ -24,7 +24,7 @@ export function ServiceGrid(props: ServiceGridProps) {
 
         sm:grid-cols-3 
 
-        md:grid-cols-4 
+        lg:grid-cols-4 
         lg:gap-10
       ">
         {services.length === 0 ? (

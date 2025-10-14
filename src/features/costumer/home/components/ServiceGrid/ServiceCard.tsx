@@ -25,12 +25,12 @@ export function ServiceCard(props: ServiceCardProps) {
           "
           onMouseOver={() => setIsMouseOver(true)}
           onMouseLeave={() => setIsMouseOver(false)}
-          >
+        >
 
           <img className="mx-auto block" src={service.imgUrl} alt={service.name} />
           {isMouseOver && (
             <div className="bg-black/70 h-full w-full flex items-center absolute top-0">
-              <div className="h-[50px] mx-auto">
+              <div className="max-h-[50px] w-[80%] mx-auto">
                 <Button>Quero esse corte!</Button>
               </div>
             </div>

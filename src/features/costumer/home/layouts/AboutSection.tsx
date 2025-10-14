@@ -43,14 +43,14 @@ export function AboutSection() {
             w-full 
             mt-10 
             mx-auto
+            max-w-[400px]
             
-            sm:w-[300px]
             sm:m-0
-
-            md:w-[400px]
-            md:m-0 
-
-            lg:w-[600px]
+            sm:w-[300px]
+            
+            lg:w-[500px]
+            
+            
         
             "
             src={aboutImg} />
