@@ -11,10 +11,10 @@ export function PlanCard(props: PlanCardProps) {
 
   return (
     <li
-      className="
+      className={`
       relative
       grow-1
-      border border-white/70 
+      border ${props.badge ? "border-blue-400" : "border-white/70"}
       flex flex-col
       justify-between
       p-4 pt-10
@@ -28,10 +28,10 @@ export function PlanCard(props: PlanCardProps) {
       md:pt-14
       
       lg:py-8 lg:px-6 
-      ">
+      `}>
       {
         props.badge &&
-        <p className="absolute top-0 left-0 px-4 py-1 bg-orange-400">{props.badge}</p>
+        <p className="absolute top-0 left-0 px-4 py-1 bg-blue-400">{props.badge}</p>
       }
 
       <div className="text-center">
