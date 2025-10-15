@@ -11,10 +11,10 @@ export function ButtonFlat(props: ButtonProps) {
       <button
         className={`
         border 
-        border-blue-500 
-        text-blue-500 
+        border-blue-400 
+        text-blue-400 
         hover:text-white 
-        hover:bg-blue-500 
+        hover:bg-blue-400 
         py-2 
         block  
         cursor-pointer
