@@ -1,6 +1,5 @@
 import type { SubscriptionPlan } from "../../../../@types/SubscriptionPlan";
 import { Button } from "../../../../shared/Button";
-import { ButtonFlat } from "../../../../shared/ButtonFlat";
 
 interface PlanCardProps {
   plan: SubscriptionPlan;
