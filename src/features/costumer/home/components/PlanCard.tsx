@@ -1,4 +1,5 @@
 import type { SubscriptionPlan } from "../../../../@types/SubscriptionPlan";
+import { Button } from "../../../../shared/Button";
 import { ButtonFlat } from "../../../../shared/ButtonFlat";
 
 interface PlanCardProps {
@@ -13,8 +14,7 @@ export function PlanCard(props: PlanCardProps) {
     <li
       className={`
       relative
-      grow-1
-      border ${props.badge ? "border-blue-400" : "border-white/70"}
+      border ${props.badge ? "border-orange-400" : "border-white/70"}
       flex flex-col
       justify-between
       p-4 pt-10
@@ -31,7 +31,7 @@ export function PlanCard(props: PlanCardProps) {
       `}>
       {
         props.badge &&
-        <p className="absolute top-0 left-0 px-4 py-1 bg-blue-400">{props.badge}</p>
+        <p className="absolute top-0 left-0 px-4 py-1 bg-orange-400">{props.badge}</p>
       }
 
       <div className="text-center">
@@ -54,7 +54,15 @@ export function PlanCard(props: PlanCardProps) {
         })}
       </ul>
 
-      <ButtonFlat>Quero esse plano</ButtonFlat>
+      <Button 
+      isCTA={props.badge}
+      colors="
+      bg-white text-black 
+      
+      hover:bg-blue-400 
+      hover:text-white 
+      hover:border-blue-400"
+      >Quero esse plano</Button>
     </li>
   );
 }

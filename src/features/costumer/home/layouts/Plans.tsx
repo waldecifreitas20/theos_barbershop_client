@@ -25,6 +25,7 @@ export function PlansSection() {
         className="
         flex flex-col         
         gap-4
+        gap-y-10
         items-center  
         
         md:grid md:grid-cols-3
