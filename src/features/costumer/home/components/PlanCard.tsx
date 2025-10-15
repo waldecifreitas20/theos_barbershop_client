@@ -23,10 +23,11 @@ export function PlanCard(props: PlanCardProps) {
       max-w-[360px]
       
       sm:p-8
-      md:px-4
       
-
-      lg:py-10 lg:px-6 
+      md:px-4     
+      md:pt-14
+      
+      lg:py-8 lg:px-6 
       ">
       {
         props.badge &&
