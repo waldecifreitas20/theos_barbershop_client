@@ -33,6 +33,7 @@ export function Button(props: ButtonProps) {
           w-full 
           ${buttonColors}
           p-3
+          md:p-2
           block
           cursor-pointer
     `}>{props.children}</button>
