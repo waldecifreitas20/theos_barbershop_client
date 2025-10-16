@@ -27,7 +27,8 @@ export function PlansSection() {
         gap-4
         gap-y-10
         items-center  
-        
+        pb-20
+
         md:grid md:grid-cols-3
         lg:gap-8
           ">

@@ -1,8 +1,9 @@
-import { AboutSection } from "./layouts/AboutSection";
-import { OurTeam } from "./layouts/OurTeam";
-import { PlansSection } from "./layouts/Plans";
-import { ServicesSection } from "./layouts/ServicesSection";
-import { TopSection } from "./layouts/TopSection";
+import { AboutSection } from "./sections/AboutSection";
+import { CallToAction } from "./sections/CallToAction";
+import { OurTeam } from "./sections/OurTeam";
+import { PlansSection } from "./sections/Plans";
+import { ServicesSection } from "./sections/ServicesSection";
+import { TopSection } from "./sections/TopSection";
 
 export function HomePage() {
   return (
@@ -12,6 +13,7 @@ export function HomePage() {
       <AboutSection />
       <OurTeam />
       <PlansSection />
+      <CallToAction />
     </div>
   );
 }
