@@ -4,7 +4,7 @@ import { Link } from "react-router";
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   isCTA?: boolean;
   goTo?: string;
-  colors?:string;
+  colors?: string;
 }
 
 
@@ -26,18 +26,23 @@ export function Button(props: ButtonProps) {
 
   return (
     <>
-      <Link to={props.goTo ?? ""}>
-        <button
-          className={`
-          border
-          w-full 
-          ${buttonColors}
-          p-3
-          md:p-2
-          block
-          cursor-pointer
-    `}>{props.children}</button>
-      </Link>
+      <button
+        className={`
+            border
+            w-full 
+            ${buttonColors}
+            block
+            cursor-pointer
+            p-3
+            md:p-2
+            `}>
+        <Link
+          to={props.goTo ?? ""}
+          className="
+          ">
+          {props.children}
+        </Link>
+      </button>
     </>
   );
 }

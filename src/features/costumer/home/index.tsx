@@ -1,5 +1,6 @@
 import { AboutSection } from "./sections/AboutSection";
 import { CallToAction } from "./sections/CallToAction";
+import { ContactUs } from "./sections/ContactUs";
 import { OurTeam } from "./sections/OurTeam";
 import { PlansSection } from "./sections/Plans";
 import { ServicesSection } from "./sections/ServicesSection";
@@ -14,6 +15,7 @@ export function HomePage() {
       <OurTeam />
       <PlansSection />
       <CallToAction />
+      <ContactUs />
     </div>
   );
 }

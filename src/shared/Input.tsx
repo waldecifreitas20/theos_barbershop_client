@@ -3,6 +3,7 @@ import { useState, type InputHTMLAttributes } from "react";
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   shouldValidate?: boolean;
   label?: string;
+  name: string;
   requiredField?: boolean | undefined;
   onValidate?: (value: string) => boolean;
   invalidText?: string;
